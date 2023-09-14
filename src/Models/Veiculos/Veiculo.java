@@ -1,6 +1,8 @@
 package Models.Veiculos;
 
-public abstract class Veiculo {
+import Interfaces.IdentificarTipo;
+
+public abstract class Veiculo implements IdentificarTipo {
     String placa;
     String nome;
     Boolean disponivel;
@@ -12,4 +14,33 @@ public abstract class Veiculo {
     }
     public Veiculo() {
     }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Boolean getDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(Boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    public boolean isDisponivel (){return this.disponivel;}
+
+    public abstract double precoDiaria();
+
 }

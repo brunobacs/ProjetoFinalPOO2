@@ -7,4 +7,13 @@ public class VeiculoMed extends Veiculo{
 
     public VeiculoMed() {
     }
+
+    @Override
+    public double precoDiaria() {return 150.0;}
+
+
+    @Override
+    public String identificarTipo() {
+        return "Veiculo Médio";
+    }
 }

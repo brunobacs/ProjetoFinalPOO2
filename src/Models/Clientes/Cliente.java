@@ -1,8 +1,10 @@
 package Models.Clientes;
 
+import Interfaces.IdentificarTipo;
+
 import java.util.TreeMap;
 
-public abstract class Cliente {
+public abstract class Cliente implements IdentificarTipo {
     String nome;
     Integer id;
 
@@ -35,4 +37,8 @@ public abstract class Cliente {
         return  "id=" + id +
                 nome + '\'';
     }
+
+
+
+
 }

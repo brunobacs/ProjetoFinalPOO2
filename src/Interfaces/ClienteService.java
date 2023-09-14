@@ -1,7 +1,5 @@
 package Interfaces;
 
-import Models.Clientes.ClientePF;
-
 public interface ClienteService<T> {
     void addCliente (T cliente);
     void removerCliente (T clientePF);

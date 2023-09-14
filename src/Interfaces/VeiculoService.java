@@ -1,9 +1,16 @@
 package Interfaces;
 
-public interface VeiculoService <T>{
-    void addVeiculo(T veiculo);
-    void removerVeiculo(T veiculo);
-    T buscarVeiculoPorNome (String nome);
-    void alterarNomeVeiculo(T veiculo);
-    void alterarPlaca(String novaPlaca, T veiculo);
+import Models.Veiculos.Veiculo;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public interface VeiculoService {
+    void addVeiculo(Veiculo veiculo);
+    void removerVeiculo(Veiculo veiculo);
+    Map<String, Veiculo> buscarVeiculoPorNome (String nome);
+    Map<String, Veiculo> buscarVeiculoPorParteDoNome (String parteDoNome);
+    void alterarNomeVeiculo(String nome, Veiculo veiculo);
+
+    void alterarPlaca(String novaPlaca, Veiculo veiculo);
 }
