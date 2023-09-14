@@ -7,4 +7,11 @@ public class VeiculoSUV extends Veiculo{
 
     public VeiculoSUV() {
     }
+    @Override
+    public double precoDiaria() {return 200.0;}
+
+    @Override
+    public String identificarTipo() {
+        return "Veiculo SUV";
+    }
 }

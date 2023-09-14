@@ -23,9 +23,7 @@ public class Aluguel {
     public Aluguel() {
     }
 
-    public Veiculo getVeiculo() {
-        return veiculo;
-    }
+    public Veiculo getVeiculo() {return veiculo;}
 
     public void setVeiculo(Veiculo veiculo) {
         this.veiculo = veiculo;

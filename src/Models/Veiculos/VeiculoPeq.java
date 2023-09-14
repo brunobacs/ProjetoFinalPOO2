@@ -7,4 +7,12 @@ public class VeiculoPeq extends Veiculo{
 
     public VeiculoPeq() {
     }
+    @Override
+    public double precoDiaria() {return 100.0;}
+
+
+    @Override
+    public String identificarTipo() {
+        return "Veiculo Pequeno";
+    }
 }

@@ -8,8 +8,15 @@ import java.util.TreeMap;
 public class ClientePFService implements ClienteService<ClientePF> {
     TreeMap<Integer, ClientePF> cpfCadastrados;
 
+    public ClientePFService(){
+        this.cpfCadastrados = new TreeMap<>();
+    }
+
     @Override
     public void addCliente (ClientePF cliente){
+        if (cpfCadastrados.containsKey(cliente.getId())){
+            return;
+        }
         this.cpfCadastrados.put(cliente.getId(), cliente);
     }
 
@@ -23,6 +30,9 @@ public class ClientePFService implements ClienteService<ClientePF> {
     public ClientePF buscarCliente (ClientePF clientePF){
         int idToFind = clientePF.getId();
         return this.cpfCadastrados.get(idToFind);
+    }
+    public ClientePF buscarClientePorId (int idPF){
+        return this.cpfCadastrados.get(idPF);
     }
     @Override
     public void alterarNomeCliente (String novoNome, ClientePF clientePF){
